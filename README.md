@@ -1,2 +1,27 @@
-# student-resume
+นาย อรุชา วัตรสังข์
+รหัสนักศึกษา 33940 
+ระดับชั้น ปวส. 2/24
+รายละเอียดโครงาน: Razum Student Resume Static Site ประกอบไปด้วยหัวข้อ ข้อมูลส่วนตัว , ประวัติการศึกษา , ทักษะ และ ผลงาน
+
+# Student Resume
+
+This repository contains a small static resume site.
+
+## Files added
+
+- `index.html` — the resume HTML (Thai language).
+- `style.css` — simple responsive styling.
+- `script.js` — small JavaScript helper for the button interaction.
+
+## Preview locally
+
+Open `index.html` in your browser. For a better local development experience (recommended), run a simple static server in PowerShell:
+
+```powershell
+# From repository root
+python -m http.server 8000;
+# Then open http://localhost:8000 in your browser
+```
+
+If you don't have Python, you can also use VS Code Live Server extension or any static file server.
 
