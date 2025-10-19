@@ -16,12 +16,5 @@ This repository contains a small static resume site.
 ## Preview locally
 
 Open `index.html` in your browser. For a better local development experience (recommended), run a simple static server in PowerShell:
-
-```powershell
-# From repository root
-python -m http.server 8000;
-# Then open http://localhost:8000 in your browser
-```
-
-If you don't have Python, you can also use VS Code Live Server extension or any static file server.
-
+Cloudflare
+https://student-resume-8lh.pages.dev
