@@ -3,6 +3,7 @@ name: Deploy Website
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -22,3 +23,12 @@ jobs:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: student-resume
           directory: ./
+      - name: Debug - list Pages projects
+        if: always()
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: |
+          echo "Listing Pages projects for account $CF_ACCOUNT_ID"
+          curl -s -H "Authorization: Bearer $CF_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/pages/projects" | jq '.' || true
